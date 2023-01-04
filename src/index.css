@@ -1,0 +1,21 @@
+
+
+/* reset */
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: "inter", sans-serif;
+}
+img {
+	width: 100%;
+	display: block;
+}
+A {
+	font-family: inherit;
+	text-decoration: none;
+}
+input {
+	outline: none;
+}
