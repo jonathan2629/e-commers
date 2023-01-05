@@ -6,8 +6,8 @@ import SimilarProducts from "../../components/ProductId/SimilarProducts";
 
 const ProductsId = () => {
 	const [product, setProduct] = useState();
-	const [categories, setCategories] = useState()
-	console.log(product);
+	const [categories, setCategories] = useState();
+
 	const { id } = useParams();
 
 	useEffect(() => {
@@ -16,22 +16,20 @@ const ProductsId = () => {
 			.get(URL)
 			.then((res) => setProduct(res.data.data.product))
 			.catch((err) => console.log(err));
-	}, []);
+	}, [id]);
 	useEffect(() => {
-
-	  const URL ="https://e-commerce-api.academlo.tech/api/v1/products/categories"
-	  axios
-	  .get(URL)
-	  .then((res) => setCategories(res.data.data.categories))
-	  .catch((err) => console.log(err));
-	
-	}, [])
-	
+		const URL =
+			"https://e-commerce-api.academlo.tech/api/v1/products/categories";
+		axios
+			.get(URL)
+			.then((res) => setCategories(res.data.data.categories))
+			.catch((err) => console.log(err));
+	}, [id]);
 
 	return (
 		<main>
 			<ProductInfo product={product} />
-			<SimilarProducts  product={product} categories={categories}/>
+			<SimilarProducts product={product} categories={categories} />
 		</main>
 	);
 };
