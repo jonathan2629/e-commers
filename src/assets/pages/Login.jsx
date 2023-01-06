@@ -1,9 +1,38 @@
-import React from 'react'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { loginUserThunk } from "../store/slices/userInfo.slice";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+	const { register, handleSubmit } = useForm();
+	const dispacht = useDispatch();
+	const submit = (data) => {
+		dispacht(loginUserThunk(data));
+	};
+	return (
+		<main>
+			<form onSubmit={handleSubmit(submit)}>
+				<h3>welcome! Enter you email and password to continue</h3>
+				<div>
+					<h4>test Data</h4>
+					<p className="bx bx-envelope">john@gmail.com</p>
+					<p className="bx bx-lock">john1234</p>
+				</div>
+				<div>
+					<label>Eamil</label>
+					<input type="email" {...register("email")} />
+				</div>
+				<div>
+					<label>Password</label>
+					<input type="password" {...register("password")} />
+				</div>
+				<button>Login</button>
+				<p>
+					Dont`t have an account? <span>sing Up</span>{" "}
+				</p>
+			</form>
+		</main>
+	);
+};
 
-export default Login
+export default Login;
