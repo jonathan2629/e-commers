@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductCard from "../app/home/ProductCard";
-
+import "./styles/similarProducts.css";
 const SimilarProducts = ({ product, categories }) => {
 	const [productsByCategory, setProductsByCategory] = useState([]);
 	useEffect(() => {
@@ -24,7 +24,7 @@ const SimilarProducts = ({ product, categories }) => {
 	}, [categories, product]);
 
 	return (
-		<section>
+		<section className="similarProducts">
 			{productsByCategory.map((productByCategory) => (
 				<ProductCard
 					product={productByCategory}
@@ -34,5 +34,5 @@ const SimilarProducts = ({ product, categories }) => {
 		</section>
 	);
 };
-       
+
 export default SimilarProducts;

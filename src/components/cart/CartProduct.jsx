@@ -10,7 +10,7 @@ const CartProduct = ({ cartProduct }) => {
 			</div>
 			<footer>
 				<h3>
-					<span>Total</span>${cartProduct}
+					<span>Total</span>${cartProduct.price}
 				</h3>
 			</footer>
 			<i className="bx bx-trash"></i>
