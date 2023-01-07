@@ -1,24 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import "./styles/header.css";
 const Header = () => {
 	return (
-		<header>
-			<NavLink to="/">
+		<header className="header">
+			<NavLink to="/" className="header-pageName">
 				<h1>e-commerce</h1>
 			</NavLink>
-			<u>
-				<li>
+			<u className="header-navBar">
+				<li className="header-link">
 					<NavLink to="/login">
 						<i className="bx bx-user"></i>
 					</NavLink>
 				</li>
-				<li>
-					<NavLink to="/pruchases">
+				<li className="header-link">
+					<NavLink to="/purchases">
 						<i className="bx bx-box"></i>
 					</NavLink>
 				</li>
-				<li>
+				<li className="header-link">
 					<NavLink to="/cart">
 						<i className="bx bx-cart"></i>
 					</NavLink>

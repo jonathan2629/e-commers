@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Categories from "../../components/app/home/Categories";
 import ProductCard from "../../components/app/home/ProductCard";
 import { getAllProducts } from "../store/slices/products.slice";
+import "./styles/home.css";
 
 const Home = () => {
 	const [nameproduct, setNameproduct] = useState("");
@@ -35,21 +36,22 @@ const Home = () => {
 	}, [nameproduct, category]);
 
 	return (
-		<main>
-			<form onSubmit={handlesubmit}>
-				<div>
+		<main className="home">
+			<form className="home-form" onSubmit={handlesubmit}>
+				<div className="home-form-div">
 					<input
+						className="home-form-input"
 						id="nameProduct"
 						type="text"
 						placeholder="what are you looking for?"
 					/>
-					<button>
+					<button className="home-form-btn">
 						<i className="bx bx-search"></i>
 					</button>
 				</div>
 			</form>
-			<section>
-				<Categories setCategory={setCategory} />
+			<Categories setCategory={setCategory} />
+			<section className="home-container-products">
 				{filterProducts.map((product) => (
 					<ProductCard key={product.id} product={product} />
 				))}

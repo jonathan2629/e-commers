@@ -25,3 +25,7 @@ export const loginUserThunk = (data) => (dispacht) => {
 		})
 		.catch((err) => console.log(err));
 };
+export const logOutThunk = () => (dispacht) => {
+	localStorage.removeItem("userInfo");
+	dispacht(setUserInfoGlobal(defaultValues));
+};

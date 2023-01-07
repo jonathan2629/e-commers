@@ -1,0 +1,35 @@
+.home {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.home-form {
+	width: max-content;
+	margin: 20px auto;
+	border: var(--color-gray) 1px solid;
+}
+.home-form-input {
+	color: var(--color-gray);
+	padding: 10px 40px 10px 10px;
+	border: navajowhite;
+	font-size: 14px;
+}
+.home-form-input::placeholder {
+	color: var(--color-gray);
+}
+.home-form-btn {
+	font-size: 14px;
+	padding: 10px;
+	border: none;
+	color: var();
+	background-color: var(--color-red);
+	cursor: pointer;
+}
+.home-form-btn:hover {
+	color: white;
+}
+.home-container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270, 1fr));
+	justify-items: center;
+	grid-template-rows: auto;
+}
