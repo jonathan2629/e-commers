@@ -1,0 +1,35 @@
+.cartproduct {
+	padding: 15px;
+	position: relative;
+	border: var(--color-gray) solid 1px;
+	border-radius: 10px;
+	transition: trasform 300ms ease;
+}
+.cartproduct:hover {
+	transform: scale(1.02);
+}
+.cartproduct-brand {
+	color: var(--color-gray);
+	font-size: 15px;
+}
+.cartproduct-title {
+	font-size: 18px;
+}
+.cartproduct-footer {
+	text-align: end;
+}
+.cartproduct-price {
+	font-size: 18px;
+}
+.cartproduct-price-title {
+	columns: var(--color-gray);
+	margin-top: 20px;
+}
+.cartproduct-trash {
+	cursor: pointer;
+	counter-reset: var(--color-gray);
+	position: relative;
+	top: 25px;
+	right: 10;
+	font-size: 24px;
+}

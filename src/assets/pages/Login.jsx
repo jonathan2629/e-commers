@@ -14,17 +14,24 @@ const Login = () => {
 		dispacht(logOutThunk());
 	};
 	return (
-		<main>
+		<main className="login">
 			{token ? (
-				<section>
-					<i className="bx bx-user-circle"></i>
-					<h3>{`${user.firstName} ${user.lastName}`}</h3>
-					<button onClick={handleClickLogout}>LogOut</button>
+				<section className="login-logged">
+					<i className=" logged-icon bx bx-user-circle"></i>
+					<h3 className="login-logged-name">{`${user.firstName} ${user.lastName}`}</h3>
+					<button
+						className="login-logged-btn"
+						onClick={handleClickLogout}
+					>
+						LogOut
+					</button>
 				</section>
 			) : (
-				<form onSubmit={handleSubmit(submit)}>
-					<h3>welcome! Enter you email and password to continue</h3>
-					<div>
+				<form className="login-form" onSubmit={handleSubmit(submit)}>
+					<h3 className="login-title">
+						welcome! Enter you email and password to continue
+					</h3>
+					<div className="login">
 						<h4>test Data</h4>
 						<p className="bx bx-envelope">john@gmail.com</p>
 						<p className="bx bx-lock">john1234</p>
