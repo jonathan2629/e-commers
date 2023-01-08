@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./styles/Cart.css";
 import { getAllCartProducts, purchaseCart } from "../store/slices/cart.slice";
-import CartProduct from "../../components/cart/CartProduct.jsx";
+import CartProduct from "../../components/cart/CartProduct";
 
 const Cart = () => {
 	const cart = useSelector((state) => state.cart);
