@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./styles/Productinfo.css";
 const ProductInfo = ({ product }) => {
 	const [quantity, setQuantity] = useState(1);
-
+	const dispatch = useDispatch();
 	const handleMinus = () => {
 		const newValue = quantity - 1;
 		if (newValue >= 1) {
@@ -11,6 +12,13 @@ const ProductInfo = ({ product }) => {
 	};
 	const handlePlus = () => {
 		setQuantity(quantity + 1);
+	};
+	const handleAddProduct = () => {
+		const data = {
+			id: product.id,
+			quantity: quantity,
+		};
+		dispatch(addProductCard(data));
 	};
 
 	return (
@@ -37,7 +45,7 @@ const ProductInfo = ({ product }) => {
 						</div>
 					</div>
 				</div>
-				<button className="productInfo-btn">
+				<button onClick={handleAddProduct} className="productInfo-btn">
 					Add to Cart
 					<i className="bx bx-cart"></i>
 				</button>

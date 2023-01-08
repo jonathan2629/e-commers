@@ -1,15 +1,23 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addProductCard } from "../../../assets/store/slices/cart.slice";
 import "./styles/ProductCard.css";
 const ProductsCard = ({ product }) => {
 	const navigate = useNavigate();
 
+	const dispatch = useDispatch();
 	const handleClickProduct = () => {
 		navigate(`/Products/${product.id}`);
 	};
 	const handleClickAddCart = (e) => {
 		e.stopPropagation();
-		console.log("pruducts added to cart");
+		const data = {
+			id: product.id,
+			quantity: 1,
+		};
+
+		dispatch(addProductCard(data));
 	};
 	return (
 		<article className="ProductCard" onClick={handleClickProduct}>
