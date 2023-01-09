@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addProductCard } from "../../assets/store/slices/cart.slice";
 import "./styles/Productinfo.css";
 const ProductInfo = ({ product }) => {
 	const [quantity, setQuantity] = useState(1);

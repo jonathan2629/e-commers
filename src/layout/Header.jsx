@@ -10,17 +10,17 @@ const Header = () => {
 			<u className="header-navBar">
 				<li className="header-link">
 					<NavLink to="/login">
-						<i className="bx bx-user" alt="login"></i>
+						<i className="bx bx-user"></i>
 					</NavLink>
 				</li>
 				<li className="header-link">
 					<NavLink to="/purchases">
-						<i className="bx bx-box" alt="your purchases"></i>
+						<i className="bx bx-box"></i>
 					</NavLink>
 				</li>
 				<li className="header-link">
 					<NavLink to="/cart">
-						<i className="bx bx-cart" alt="your cart"></i>
+						<i className="bx bx-cart"></i>
 					</NavLink>
 				</li>
 			</u>
