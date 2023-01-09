@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import PurchaseCard from "../../components/purchases/PurchaseCard";
 import { getConfig } from "../../utils/configAxios";
 
 const Purchases = () => {
@@ -16,7 +17,11 @@ const Purchases = () => {
 	return (
 		<main>
 			<h2>My purchases</h2>
-			<section>{}</section>
+			<section>
+				{purchases.map((purchase) => (
+					<PurchaseCard key={purchase.id} purchase={purchase} />
+				))}
+			</section>
 		</main>
 	);
 };

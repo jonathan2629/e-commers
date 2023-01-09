@@ -1,11 +1,18 @@
 import React from "react";
 
-const ProductPurchase = () => {
+const ProductPurchase = ({ productpurchase }) => {
 	return (
-		<article>
-			<h4>title</h4>
-			<h4>quantity</h4>
-			<h4>price</h4>
+		<article className="productpurchase">
+			<h4 className="productpurchase-title">{productpurchase.title}</h4>
+			<h4 className="productpurchase-quantity">
+				{productpurchase.productsInCart.quantity}
+			</h4>
+			<h4 className="productpurchase-price">
+				{(
+					productpurchase.productsInCart.quantity *
+					productpurchase.price
+				).toFixed(2)}
+			</h4>
 		</article>
 	);
 };

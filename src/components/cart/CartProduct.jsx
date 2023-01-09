@@ -6,27 +6,27 @@ const CartProduct = ({ cartProduct }) => {
 	const dispatch = useDispatch();
 
 	const handleDeleteproduct = () => {
-		dispatch(deleteProductscart(cartProduct.id));
+		dispatch(deleteProductscart(cartProduct?.id));
 	};
 
 	return (
-		<article className="cartProduct">
-			<h4 className="cartProduct-brand">{cartProduct.brand}</h4>
-			<h3 className="cartProduct-title">{cartProduct.title}</h3>
-			<div className="cartProduct-quantity">
-				<p>{cartProduct.productsInCart.quantity}</p>
+		<article className="cartproduct">
+			<h4 className="cartproduct-brand">{cartProduct.brand}</h4>
+			<h3 className="cartproduct-title">{cartProduct.title}</h3>
+			<div className="cartproduct-quantity">
+				<p>{cartProduct?.productsInCart.quantity}</p>
 			</div>
-			<footer className="cartProduct-footer">
-				<h3 className="cartProduct-price">
-					<span className="cartProduct-title">Total</span>$
+			<footer className="cartproduct-footer">
+				<h3 className="cartproduct-price">
+					<span className="cartproduct-price-title">Total</span>$
 					{(
-						cartProduct.productsIncart.quantity * cartProduct.price
+						cartProduct.productsInCart.quantity * cartProduct.price
 					).toFixed(2)}
 				</h3>
 			</footer>
 			<i
 				onClick={handleDeleteproduct}
-				className="cartProduct-trash bx bx-trash"
+				className="cartproduct-trash bx bx-trash"
 			></i>
 		</article>
 	);

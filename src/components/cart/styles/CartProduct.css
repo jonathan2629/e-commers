@@ -1,9 +1,9 @@
 .cartproduct {
-	padding: 15px;
+	padding: 5px 15px;
 	position: relative;
 	border: var(--color-gray) solid 1px;
 	border-radius: 10px;
-	transition: trasform 300ms ease;
+	transition: transform 300ms ease;
 }
 .cartproduct:hover {
 	transform: scale(1.02);
@@ -22,14 +22,17 @@
 	font-size: 18px;
 }
 .cartproduct-price-title {
-	columns: var(--color-gray);
-	margin-top: 20px;
+	color: var(--color-gray);
+	margin-right: 20px;
 }
 .cartproduct-trash {
 	cursor: pointer;
-	counter-reset: var(--color-gray);
-	position: relative;
-	top: 25px;
-	right: 10;
+	color: var(--color-red);
+	position: absolute;
+	right: 10px;
+	top: 35px;
 	font-size: 24px;
+}
+.cartproduct-trash:hover {
+	color: var(--color-gray);
 }

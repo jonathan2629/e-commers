@@ -19,14 +19,14 @@ export const getAllCartProducts = () => (dispacht) => {
 		.then((res) => dispacht(setCartGlobal(res.data.data.cart.products)))
 		.catch((err) => console.log(err));
 };
-export const addProductCard = () => (dispacht) => {
+export const addProductCard = (data) => (dispacht) => {
 	const URL = `${BASE_URL}cart`;
 	axios
 		.post(URL, data, getConfig())
 		.then((res) => console.log(res.data))
 		.catch((err) => console.log(err));
 };
-export const deleteProductscart = () => (dispatch) => {
+export const deleteProductscart = (id) => (dispatch) => {
 	const URL = `${BASE_URL}cart/${id}`;
 	axios
 		.delete(URL, getConfig())
