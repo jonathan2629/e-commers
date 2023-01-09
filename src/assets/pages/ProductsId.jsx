@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductInfo from "../../components/ProductId/ProductInfo";
 import SimilarProducts from "../../components/ProductId/SimilarProducts";
-import "./styles/ProductsId.css";
+import "./styles/productsId.css";
 const ProductsId = () => {
 	const [product, setProduct] = useState();
 	const [categories, setCategories] = useState();
