@@ -9,7 +9,7 @@ const SimilarProducts = ({ product, categories }) => {
 			const category = categories.filter(
 				(category) => category.name === product.category
 			);
-			const URL = `https:/e-commerce-api.academlo.tech/api/v1/products?category=${category[0].id}`;
+			const URL = `https://e-commerce-api.academlo.tech/api/v1/products?category=${category[0].id}`;
 
 			axios
 				.get(URL)
