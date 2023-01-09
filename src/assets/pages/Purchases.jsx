@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import PurchaseCard from "../../components/purchases/PurchaseCard";
 import { getConfig } from "../../utils/configAxios";
+import "./styles/Purchases.css";
 
 const Purchases = () => {
 	const [purchases, setpurchases] = useState([]);
@@ -15,9 +16,9 @@ const Purchases = () => {
 	}, []);
 
 	return (
-		<main>
+		<main className="purchases">
 			<h2>My purchases</h2>
-			<section>
+			<section className="purchases-list">
 				{purchases.map((purchase) => (
 					<PurchaseCard key={purchase.id} purchase={purchase} />
 				))}

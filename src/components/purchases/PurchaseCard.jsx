@@ -1,7 +1,7 @@
 import React from "react";
 import { changeDateFormat } from "../../utils/date";
 import ProductPurchase from "./ProductPurchase";
-
+import "./styles/PurchaseCard.css";
 const PurchaseCard = ({ purchase }) => {
 	return (
 		<article className="purchaseCard">

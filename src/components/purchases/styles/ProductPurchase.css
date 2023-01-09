@@ -1,0 +1,30 @@
+.productpurchase {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-bottom: var(--color-gray) solid 1px;
+}
+.productpurchase-title {
+	width: 100%;
+	text-align: center;
+	font-weight: normal;
+}
+.productpurchase-quantity {
+	padding: 10px;
+	border: var(--color-gray) solid 1px;
+	font-weight: normal;
+}
+@media (min-width: 768px) {
+	.productpurchase {
+		border-bottom: none;
+		margin-left: 150px;
+	}
+	.productpurchase-title {
+		width: 33%;
+		text-align: start;
+	}
+	.productpurchase-price {
+		width: 33%;
+		text-align: end;
+	}
+}

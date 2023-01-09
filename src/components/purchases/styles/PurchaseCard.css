@@ -1,0 +1,20 @@
+.purchaseCard {
+	border: var(--color-gray) solid 1px;
+	padding: 10px;
+	border-radius: 12px;
+	columns: #515151;
+	overflow: hidden;
+}
+.purchaseCard-date {
+	margin: 0 0 15px 0;
+	font-size: 18px;
+}
+.purchaseCard-line {
+	width: 120%;
+	position: relative;
+	left: -20px;
+	color: var(--color-gray);
+}
+.purchaseCard-list {
+	padding: 0 10px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./styles/ProductPurchase.css";
 const ProductPurchase = ({ productpurchase }) => {
 	return (
 		<article className="productpurchase">
