@@ -3,13 +3,12 @@
 	max-width: 1200px;
 }
 .home-form {
-	display: flex;
-	justify-content: center;
-	align-content: center;
+	position: absolute;
+	right: 50%;
+	left: 50%;
+	content: center;
 	width: max-content;
 	background-color: red;
-	
-	
 
 	border: var(--color-gray) 1px solid;
 }
@@ -18,7 +17,6 @@
 	padding: 10px 40px 10px 10px;
 	border: navajowhite;
 	font-size: 14px;
-	
 }
 .home-form-input::placeholder {
 	color: var(--color-gray);
@@ -41,4 +39,5 @@
 	grid-template-rows: auto;
 	gap: 40px;
 	margin: 0 20px 20px 20px;
+	cursor: pointer;
 }

@@ -23,12 +23,12 @@ const ProductInfo = ({ product }) => {
 
 	return (
 		<article className="productInfo">
-			<h2 className="productInfo-title">{product.title}</h2>
-			<p className="productInfo-description">{product.description}</p>
+			<h2 className="productInfo-title">{product?.title}</h2>
+			<p className="productInfo-description">{product?.description}</p>
 			<footer className="productInfo-footer">
 				<div className="productInfo-container-price">
 					<h3 className="productInfo-price-title">price</h3>
-					<span className="productInfo-price">{product.price}</span>
+					<span className="productInfo-price">{product?.price}</span>
 				</div>
 				<div className="productInfo-container-quantity">
 					<h3 className="productInfo-quatity-title">Quantity</h3>

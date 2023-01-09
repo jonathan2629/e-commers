@@ -33,7 +33,7 @@ const ProductsCard = ({ product }) => {
 					className="ProductCard-btn"
 					onClick={handleClickAddCart}
 				>
-					<i className="bx bx-cart"></i>
+					<i className="bx bx-cart" alt="your purchases"></i>
 				</button>
 			</div>
 		</article>
